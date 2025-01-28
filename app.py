@@ -76,4 +76,5 @@ def full_schedule():
     return render_template('full_schedule.html', shows_data=shows_data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Flask ilovasini Render platformasida ishlatish uchun to'g'ri port va host bilan ishga tushiramiz
+    app.run(debug=True, host="0.0.0.0", port=8000)
