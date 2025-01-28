@@ -7,7 +7,7 @@ import pytz
 app = Flask(__name__)
 
 # Google Sheets API kaliti va ID
-SERVICE_ACCOUNT_FILE = 'modified-hearth-445107-a7-96006d757253.json'
+SERVICE_ACCOUNT_FILE = 'modified-hearth-445107-a7-51ed5f6f4110.json'
 SPREADSHEET_ID = '1Xd0sNhai8Cdq4DkTgbDIBGy31wv6gcP3X10CMEDGd14'
 RANGE_NAME = 'Sheet1!A:C'
 
@@ -76,5 +76,4 @@ def full_schedule():
     return render_template('full_schedule.html', shows_data=shows_data)
 
 if __name__ == '__main__':
-    # Flask ilovasini Render platformasida ishlatish uchun to'g'ri port va host bilan ishga tushiramiz
-    app.run(debug=True, host="0.0.0.0", port=8000)
+    app.run(debug=True)
