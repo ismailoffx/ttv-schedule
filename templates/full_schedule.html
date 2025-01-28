@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bugungi Jadval</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Bugungi Jadval</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ko'rsatuv Nomi</th>
+                    <th>Boshlanish Vaqti</th>
+                    <th>Tugash Vaqti</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for show in shows_data %}
+                    <tr>
+                        <td>{{ show[0] }}</td>
+                        <td>{{ show[1] }}</td>
+                        <td>{{ show[2] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ url_for('index') }}">
+            <button>Orqaga</button>
+        </a>
+    </div>
+</body>
+</html>

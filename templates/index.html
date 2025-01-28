@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-TV ko'rsatuvlar jadvali</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #f1faee;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #f8f9fa;
+            color: #212529;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #457b9d;
+            color: #f1faee;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .header h2 {
+            margin: 0;
+        }
+
+        .show-info {
+            padding: 1.5rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .show-info:last-child {
+            border-bottom: none;
+        }
+
+        .show-info h2 {
+            margin-top: 0;
+            font-size: 1.25rem;
+            color: #1d3557;
+        }
+
+        .show-info p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .show-info h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #457b9d;
+        }
+
+        .buttons {
+            text-align: center;
+            padding: 1rem;
+            background: #f1faee;
+        }
+
+        .buttons a {
+            text-decoration: none;
+        }
+
+        .buttons button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            background: #1d3557;
+            color: #f1faee;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .buttons button:hover {
+            background: #457b9d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Hozirgi vaqt: <span id="current-time"></span></h2>
+        </div>
+        <div class="show-info">
+            <h2>Hozir efirda:</h2>
+            {% if current_show %}
+                <p><h3>{{ current_show.name }}</h3> (Tugashiga qoldi: <span id="time-left">{{ current_show.time_left }}</span>)</p>
+            {% else %}
+                <p>Hozirda ko'rsatuv yo'q.</p>
+            {% endif %}
+        </div>
+        <div class="show-info">
+            <h2>Dastur davomida:</h2>
+            {% if next_show %}
+                <p><h3>{{ next_show.name }}</h3> (Boshlanish vaqti: {{ next_show.start_time }})</p>
+            {% else %}
+                <p>Keyingi ko'rsatuv yo'q.</p>
+            {% endif %}
+        </div>
+        <div class="buttons">
+            <a href="https://t.me/TTV_Uzbekistan?livestream" target="_blank">
+                <button>Jonli Efir</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

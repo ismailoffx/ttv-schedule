@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f7ff;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header h2 {
+    color: #007bff;
+}
+
+.show-info {
+    margin-top: 20px;
+}
+
+.buttons button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}
+
+.full-schedule {
+    margin-top: 20px;
+    display: none;
+}
+
+.full-schedule table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.full-schedule th, .full-schedule td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.full-schedule th {
+    background-color: #f0f0f0;
+}
