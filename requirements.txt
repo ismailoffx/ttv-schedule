@@ -1,7 +1,7 @@
-Flask==2.2.3
-werkzeug==2.0.3
-google-api-python-client==2.84.0
-google-auth==2.16.0
-google-auth-httplib2==0.1.0
-google-api-python-client==2.84.0
-pytz==2023.3
+Flask
+werkzeug
+google-api-python-client
+google-auth
+google-auth-httplib2
+google-api-python-client
+pytz
